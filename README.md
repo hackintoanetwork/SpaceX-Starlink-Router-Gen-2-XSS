@@ -1,5 +1,8 @@
 # SpaceX / Starlink Router Gen 2 XSS
 
+You can see the Korean version of the post here : <br>
+<a href="https://hackintoanetwork.com/blog/2023-starlink-router-gen2-xss-kor/">```https://hackintoanetwork.com/blog/2023-starlink-router-gen2-xss-kor```</a>
+
 ## TL;DR
 
 ---
