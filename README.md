@@ -3,13 +3,6 @@
 You can see the Korean version of the post here : <br>
 <a href="https://hackintoanetwork.com/blog/2023-starlink-router-gen2-xss-kor/">```https://hackintoanetwork.com/blog/2023-starlink-router-gen2-xss-kor```</a>
 
----
-title: "2023 SpaceX / Starlink Router Gen 2 XSS (ENG)"
-description: "Found by Sehyoung Lee @hackintoanetwork"
-dateString: Dec 2023
-draft: false
-tags: ["SpaceX", "Starlink", "Router", "Dishy" ,"Exploit", "Hacking", "Bug bounty"]
----
 # TL;DR
 
 ---
