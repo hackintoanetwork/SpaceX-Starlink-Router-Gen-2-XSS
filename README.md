@@ -21,7 +21,7 @@ A `Cross-Site Scripting (XSS)` vulnerability in the initial `captive portal` pag
 
 ---
 
-![img1.webp](/blog/2023-Starlink-Router-Gen2-XSS/img1.webp)
+![img1.webp](https://hackintoanetwork.com/blog/2023-Starlink-Router-Gen2-XSS/img1.webp)
 
 The vulnerability is caused by insufficient filtering of input values for the `ssid` and `password` parameters on the initial router setup page ([http://192.168.1.1/setup](http://192.168.1.1/setup)).
 
@@ -44,7 +44,7 @@ The vulnerability is caused by insufficient filtering of input values for the `s
 
 This `Cross-Site Scripting (XSS)` vulnerability can be leveraged in conjunction with a `Cross-Site Request Forgery (CSRF)` attack, as shown in the proof of concept above.
 
-[reproduce(PoC).mov](/blog/2023-Starlink-Router-Gen2-XSS/reproduce(PoC).mov)
+[reproduce(PoC).mov](https://hackintoanetwork.com/blog/2023-Starlink-Router-Gen2-XSS/reproduce(PoC).mov)
 
 # **Exploit**
 
@@ -54,18 +54,18 @@ Normally, the `captive portal` page should only be active on the `router's inter
 
 - [http://192.168.1.1/setup](http://192.168.1.1/setup) → The captive portal page is displayed correctly.
     
-    ![http://192.168.1.1/setup](/blog/2023-Starlink-Router-Gen2-XSS/img2.png)
+    ![http://192.168.1.1/setup](https://hackintoanetwork.com/blog/2023-Starlink-Router-Gen2-XSS/img2.png)
     
 - [http://192.168.100.1/setup](http://192.168.100.1/setup) → The captive portal page is also displayed at this address.
     
-    ![http://192.168.100.1/setup](/blog/2023-Starlink-Router-Gen2-XSS/img3.png)
+    ![http://192.168.100.1/setup](https://hackintoanetwork.com/blog/2023-Starlink-Router-Gen2-XSS/img3.png)
     
 
 (Normally, access to the captive portal page should not be possible at Dishy's internal address, 192.168.100.1.)
 
 Using such a bug along with the `Cross-Site Scripting (XSS)` vulnerability allows for the circumvention of the browser's `Same-Origin Policy (SOP)`, enabling control over both the Router and Dishy.
 
-[192.168.100.1_PoC.mov](/blog/2023-Starlink-Router-Gen2-XSS/192.168.100.1_PoC.mov)
+[192.168.100.1_PoC.mov](https://hackintoanetwork.com/blog/2023-Starlink-Router-Gen2-XSS/192.168.100.1_PoC.mov)
 
 It can be confirmed that the same `Cross-Site Scripting (XSS)` vulnerability occurs at the address [http://192.168.100.1/setup](http://192.168.100.1/setup) as well.
 
@@ -76,7 +76,7 @@ Now let's see how i can leverage these bugs to take control of `Router` and `Dis
 ---
 <center>
 
-![Starlink Dishy Stow](/blog/2023-Starlink-Router-Gen2-XSS/gif1.gif)
+![Starlink Dishy Stow](https://hackintoanetwork.com/blog/2023-Starlink-Router-Gen2-XSS/gif1.gif)
 </center>
 When the `Stow` command is issued from the administrator interface, the following HTTP Request is sent to `Dishy`
 
@@ -114,7 +114,7 @@ This Request's header contains several important pieces of information.
     
 - **Request Body**
     
-    ![Dishy Stow Request body (Hex)](/blog/2023-Starlink-Router-Gen2-XSS/img4.png)
+    ![Dishy Stow Request body (Hex)](https://hackintoanetwork.com/blog/2023-Starlink-Router-Gen2-XSS/img4.png)
     
     Dishy Stow Request body (Hex)
     
@@ -186,11 +186,11 @@ Therefore, by chaining the `Cross-Site Scripting (XSS)` vulnerability and the af
 
 ---
 
-[Exploit-PoC.mp4](/blog/2023-Starlink-Router-Gen2-XSS/Exploit-PoC.mp4)
+[Exploit-PoC.mp4](https://hackintoanetwork.com/blog/2023-Starlink-Router-Gen2-XSS/Exploit-PoC.mp4)
 
 # CVE
 
-- [CVE-2023-49965](https://www.cve.org/CVERecord?id=CVE-2023-49965) (Reserved)
+- [CVE-2023-49965](https://www.cve.org/CVERecord?id=CVE-2023-49965)
 
 # **TimeLine**
 
