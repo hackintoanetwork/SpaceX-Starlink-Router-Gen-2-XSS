@@ -78,6 +78,7 @@ Now let's see how i can leverage these bugs to take control of `Router` and `Dis
 
 ![Starlink Dishy Stow](https://hackintoanetwork.com/blog/2023-Starlink-Router-Gen2-XSS/gif1.gif)
 </center>
+
 When the `Stow` command is issued from the administrator interface, the following HTTP Request is sent to `Dishy`
 
 
