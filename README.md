@@ -189,7 +189,7 @@ Therefore, by chaining the `Cross-Site Scripting (XSS)` vulnerability and the af
 
 ---
 
-[Exploit-PoC.mp4](/blog/2023-Starlink-Router-Gen2-XSS/Exploit-PoC.mp4)
+[Exploit-PoC.mp4](https://hackintoanetwork.com/blog/2023-Starlink-Router-Gen2-XSS/Exploit-PoC.mp4)
 
 # CVE
 
